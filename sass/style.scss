@@ -135,8 +135,6 @@ html,
 body {
 	max-width: auto;
 	min-height: auto;
-	background-image: url(/media/graphics/sun-tornado.svg);
-	/* background by SVGBackgrounds.com */
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -1045,10 +1043,17 @@ footer {
 	body {
 		max-width: auto;
 		min-height: auto;
-		background-image: url(/media/graphics/sun-tornado.svg);
-		/* background by SVGBackgrounds.com */
-		background-repeat: no-repeat;
-		background-size: cover;
+		z-index: 999;
+	}
+
+	/* Style dodatkowe CSS dla pliku SVG */
+	#background-svg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
 	}
 
 	#first {
