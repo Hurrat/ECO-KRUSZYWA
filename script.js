@@ -45,11 +45,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	btn.onclick = function () {
 		modal.style.display = 'block'
-		modalImg.src = 'media/graphics/analiza.jpg'
+		modal.classList.remove('fadeOut')
+		modalImg.classList.remove('slideOut')
+		modalImg.src = 'media/graphics/analiza.jpg' // Upewnij się, że ścieżka jest poprawna
 	}
 
 	function closeModal() {
-		modal.style.display = 'none'
+		modal.classList.add('fadeOut')
+		modalImg.classList.add('slideOut')
+		setTimeout(() => {
+			modal.style.display = 'none'
+		}, 400) // Czekamy na zakończenie animacji
 	}
 
 	span.onclick = function () {
